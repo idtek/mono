@@ -16,7 +16,7 @@
 #include <signal.h>
 #endif
 
-typedef void (* MonoW32ExceptionHandler) (int _dummy, EXCEPTION_POINTERS *info, void *context);
+typedef void (* MonoW32ExceptionHandler) (gboolean* handled, EXCEPTION_POINTERS *info, void *context);
 
 void win32_seh_init(void);
 void win32_seh_cleanup(void);
